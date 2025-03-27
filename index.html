@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft AFK Bot - Simple Access</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: white;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #4ade80;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #4ade80;
+      color: #121212;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Minecraft AFK Bot</h1>
+    
+    <div class="card">
+      <h2>Bot Status</h2>
+      <p>The Minecraft bot is running and working correctly.</p>
+      <p>Bot will automatically attempt to connect to:</p>
+      <ul>
+        <li>Server: imdurreloaded.aternos.me:40670</li>
+        <li>Username: AFK444</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h2>Web Interface Access</h2>
+      <p>Try accessing the web interface through these links:</p>
+      
+      <div>
+        <a href="/landing" class="btn">Smart Landing Page</a>
+        <a href="/" class="btn">Main Interface</a>
+        <a href="/direct" class="btn">Direct Access</a>
+        <a href="/mobile" class="btn">Mobile Version</a>
+        <a href="/info" class="btn">Info Page</a>
+        <a href="/troubleshoot" class="btn">Troubleshoot Access</a>
+        <a href="/simple" class="btn">Simple View</a>
+      </div>
+      
+      <p style="margin-top: 20px;">If you're using Replit, try:</p>
+      <ol>
+        <li>Click on the "Webview" tab in the Replit editor</li>
+        <li>Try refreshing the browser multiple times</li>
+        <li>Try both HTTP and HTTPS versions of the URL</li>
+      </ol>
+    </div>
+    
+    <div class="card">
+      <h2>In-Game Commands</h2>
+      <p>You can use these commands in Minecraft:</p>
+      <ul>
+        <li><strong>!help</strong> - Shows all available commands</li>
+        <li><strong>!follow [player]</strong> - Makes the bot follow a player</li>
+        <li><strong>!stopfollow</strong> - Stops following a player</li>
+        <li><strong>!sleep</strong> - Makes the bot sleep in a nearby bed</li>
+        <li><strong>!leave</strong> - Makes the bot leave and rejoin the server</li>
+        <li><strong>!farm</strong> - Makes the bot start farming nearby crops</li>
+        <li><strong>!stay</strong> - Makes the bot stop farming</li>
+      </ul>
+    </div>
+  </div>
+  
+  <script>
+    // Very simple check to see if we can access the API
+    fetch('/health')
+      .then(response => response.json())
+      .then(data => {
+        console.log('Health check successful:', data);
+        document.body.innerHTML += '<div style="position:fixed; bottom:20px; right:20px; background-color:#4ade80; color:#121212; padding:10px; border-radius:4px;">✓ API is accessible</div>';
+      })
+      .catch(error => {
+        console.error('Health check failed:', error);
+      });
+  </script>
+</body>
+</html>
